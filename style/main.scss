@@ -1,0 +1,390 @@
+@import '../style/variables.scss';
+
+
+html {
+    font-family: 'Micra', sans-serif;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.wrap {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: black;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.menu_block {
+    width: 350px;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+    .menu_logo {
+        width: 500px;
+        height: 500px;
+        background-image: url(../image/mainlogo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .menu_items {
+        margin-top: 50px;
+        
+        li {
+            margin-top: 20px;
+            width: 350px;
+            height: 72px;
+            background-color: $font-color-base;
+            border-radius: 50px;
+            text-align: center;
+            padding: 20px 0;
+            box-sizing: border-box;
+            list-style-type: none;
+        }
+        ul {
+            margin-left: 0;
+            padding-left: 0;
+        }
+        a {
+            font-size: $font-size-normal;
+            color: black;
+            text-decoration: none;
+        }
+ 
+    }
+    .menu_contacts {
+        margin-top: 50px;
+        display: flex;
+
+        .instagram { 
+            width: 40px;
+            height: 40px;
+            background-image: url(../image/инс.svg);
+        }
+        .viber { 
+            width: 40px;
+            height: 40px;
+            margin-left: 35px;
+            background-image: url(../image/тел.svg);
+        }
+        .mail { 
+            width: 40px;
+            height: 40px;
+            margin-left: 35px;
+            background-image: url(../image/почта.svg);
+        }
+    }
+}
+li {
+    color: $font-color-base;
+}
+.design_block {
+    display: flex;
+    flex-direction: row;
+    padding-top: 70px;
+}
+.design {
+    padding: 0 100px;
+    box-sizing: border-box;
+    background-image: url(../image/designfone.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.desing_header {
+
+    h1 {
+        font-size: $font-size-big;
+        color: $font-color-one;
+    }
+    li {
+        margin-top: 20px;
+        list-style-type: none;
+        color: $font-color-one;
+    }
+    ul {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+.desing_text {
+
+    h3 {
+        margin-top: 60px;
+        font-size: $font-size-normal;
+        color: $font-color-one;
+    }
+    li {
+        margin-top: 20px;
+        list-style-type: none;
+        color: $font-color-one;
+    }
+    ul {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+.desing_logo {
+    width: 175px;
+    height: 105px;
+    margin-top: 100px;
+    background-image: url(../image/logogrey.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.design_works {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .works_start {
+        width: 265px;
+        height: 265px;
+        margin: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        background-color: $font-color-base;
+
+        .work_tittle {
+            color: $font-color-one;
+        }
+        .work_next {
+            width: 230px;
+            height: 200px;
+            display: flex;
+            background-image: url(../image/worknext.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+    .work_end {
+        width: 265px;
+        height: 265px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        background-color: $font-color-base;
+
+        .work_previous {
+            width: 100px;
+            height: 265px;
+            margin-right: 10px;
+            display: flex;
+            background-image: url(../image/workprevious.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: $font-color-base;
+        }
+       
+        .work_next {
+            width: 50px;
+            height: 265px;
+            display: flex;
+            background-image: url(../image/worknext.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: $font-color-base;
+        }
+    }
+
+    .work_item {
+        margin: 5px;
+        width: 265px;
+        height: 265px;
+        display: flex;
+        background-image: url(../image/face_one.png);
+        background-size: contain;
+    }
+    
+}
+.retush_block {
+    padding: 70px 50px 10px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.retush {
+    width: 40%;
+
+    .retush_text {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .retush_header {
+            height: 400px;
+            display: flex;
+            font-size: $font-size-big;
+            color: $font-color-one;
+            transform: rotate(-90deg);
+        }
+        .desing_logo {
+            margin: 0;
+        }
+    }
+    .desing_header {
+        margin-top: 85px;
+        margin-left: 20px;
+    }
+}      
+
+.photo {
+    width: 60%;
+    display: flex;
+    background-image: url(../image/photomain.png);
+    background-position: center center;
+}
+.retush_slider {
+    width: 100%;
+    height: 315px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .photo_item {
+        margin: 10px;
+        width: 210px;
+        height: 210px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../image/face_one.png);
+    }
+    .slide_button {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .previous {
+        background-color: black;
+        background-image: url(../image/befor.svg);
+    }
+    .next {
+        background-color: black;
+        background-image: url(../image/after.svg);
+    }
+}
+
+.contacts_block {
+    width: 100%;
+    padding: 80px 0 80px 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../image/www.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+        .formBlock {
+            width: 740px;
+            height: 840px;
+            padding: 50px 75px;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.089);
+            z-index: 99;
+            
+            .desing_logoWhite {
+                width: 170px;
+                height: 105px;
+                background-image: url(../image/logohite.svg)
+            }
+
+            p {
+                color: $font-color-one;
+                line-height: 40px;
+            }
+        }
+        .blockInfo {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        
+            input[type="text"], {
+                width: 100%;
+                height: 70px;
+                padding: 0 50px;
+                margin: 0 0 10px 0;
+                border: 0;
+                font-size: 18px;
+                box-sizing: border-box;
+                background-image: url(../image/name.svg);
+                background-size: 25px 25px;
+                background-repeat: no-repeat;
+                background-position: 15px center;
+            }
+            input[type="email"] {
+                width: 100%;
+                height: 70px;
+                padding: 0 50px;
+                margin: 10px 0 10px 0;
+                border: 0;
+                font-size: 18px;
+                box-sizing: border-box;
+                background-image: url(../image/email.svg);
+                background-size: 25px 25px;
+                background-repeat: no-repeat;
+                background-position: 15px center;
+            }
+            textarea {
+                width: 100%;
+                height: 200px;
+                padding: 20px 50px;
+                margin: 10px 0 10px 0;
+                border: 0;
+                font-size: 18px;
+                box-sizing: border-box;
+                background-image: url(../image/messeg.svg);
+                background-size: 25px 25px;
+                background-repeat: no-repeat;
+                background-position: 15px 15px;
+            }
+            input[type="submit"] {
+                width: 300px;
+                height: 70px;
+                margin-top: 40px;
+                padding: 8px 10px;
+                letter-spacing: 3px;
+                text-decoration: none;
+                border: 1px solid #fff;
+                border-radius: 4px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            input[type="submit"]:hover {
+                background: transparent;
+                color: $font-color-one;
+            }
+        }
+}
