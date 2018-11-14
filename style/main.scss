@@ -9,23 +9,30 @@ button {
     outline: none;
     cursor: pointer;
 }
+li {
+    color: $font-color-base;
+}
+a {
+    font-size: $font-size-normal;
+    color: $font-color-one;
+    text-decoration: none;
+}
 
 .wrap {
     width: 100vw;
-    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     position: relative;
     background-color: black;
 }
 .container {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 .menu_block {
-    width: 350px;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -49,21 +56,25 @@ button {
             height: 72px;
             background-color: $font-color-base;
             border-radius: 50px;
-            text-align: center;
-            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
             box-sizing: border-box;
             list-style-type: none;
+        }
+        li:hover {
+            transition: 0.7s linear;
+            background: none;
+            color: $font-color-one;
+            border: 3px solid $font-color-base;
+            
         }
         ul {
             margin-left: 0;
             padding-left: 0;
         }
-        a {
-            font-size: $font-size-normal;
-            color: black;
-            text-decoration: none;
-        }
- 
+
     }
     .menu_contacts {
         margin-top: 50px;
@@ -88,9 +99,7 @@ button {
         }
     }
 }
-li {
-    color: $font-color-base;
-}
+
 .design_block {
     display: flex;
     flex-direction: row;
@@ -284,9 +293,28 @@ li {
         background-color: black;
         background-image: url(../image/befor.svg);
     }
+        .previous:hover {
+            animation: sahke 0.5s linear alternate infinite;
+        
+            @keyframes sahke {
+                100% {
+                    transform: translateX(-10px);
+                }
+            }
+        }
+    
     .next {
         background-color: black;
         background-image: url(../image/after.svg);
+    }
+    .next:hover {
+        animation: sahke 0.5s linear alternate infinite;
+    
+        @keyframes sahke {
+            100% {
+                transform: translateX(-10px);
+            }
+        }
     }
 }
 
@@ -383,8 +411,75 @@ li {
                 text-align: center;
             }
             input[type="submit"]:hover {
+                transition: 1s;
                 background: transparent;
                 color: $font-color-one;
             }
         }
+}
+.blockFooter{
+    height: 100px;
+    padding: 0px 160px 0 160px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.author {
+    display: flex;
+    font-size: $font-size-base;
+    font-weight: bold;
+    color: $font-color-one;
+}
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+    &__text {
+        font-size: $font-size-base;
+        font-weight: bold;
+        color: $font-color-one;
+    }
+    &__image {
+        height: 50px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        // background-color: red;
+    }
+}
+.imageItemOne {
+    width: 30px;
+    height: 10px;
+    display: flex;
+    animation: showImagOne 0.75s infinite;
+    background-image: url(../image/footerImag.svg);
+}
+@keyframes showImagOne {
+    0%{ opacity: 0}
+    100%{opacity: 1}
+}
+.imageItemTwo {
+    width: 30px;
+    height: 10px;
+    display: flex;
+    animation: imageItemTwo 0.73s infinite;
+    background-image: url(../image/footerImag.svg);
+}
+@keyframes imageItemTwo {
+    0%{ opacity: 0}
+    100%{opacity: 1}
+}
+.imageItemThree {
+    width: 30px;
+    height: 10px;
+    display: flex;
+    animation: imageItemThree 0.7s infinite;
+    background-image: url(../image/footerImag.svg);
+}
+@keyframes imageItemThree {
+    0%{ opacity: 0}
+    100%{opacity: 1}
 }
