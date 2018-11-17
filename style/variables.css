@@ -1,3 +1,17 @@
 @charset "UTF-8";
 /* можно писать без скобочек { } но не рекомендуется */
+@ss : ~"screen and (max-width: 320px)";
+@sm : ~"screen and (max-width: 480px)";
+@sb : ~"screen and (max-width: 670px)";
+@ssl : ~"screen and (max-width: 320px) and (orientation: landscape)";
+@sml : ~"screen and (max-width: 480px) and (orientation: landscape)";
+@sbl : ~"screen and (max-width: 640px) and (orientation: landscape)";
+@tp :  ~"screen and (max-width: 768px)";
+@tl : ~"screen and (max-width: 1024px)";
+@hd : ~"screen and (max-width: 1280px)";
+@lap : ~"screen and (max-width: 1366px)";
+@mr : ~"screen and (max-width: 1400px)";
+@mr1500 : ~"screen and (max-width: 1500px)";
+@ldt : ~"screen and (max-width: 1680px)";
+@fullhd : ~"screen and (max-width: 1920px)";
 /*# sourceMappingURL=variables.css.map */

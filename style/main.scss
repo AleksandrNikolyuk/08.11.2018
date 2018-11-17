@@ -1,4 +1,5 @@
-@import '../style/variables.scss';
+@import '../style/_variables.scss';
+@import '../style/_mixin.scss';
 
 
 html {
@@ -43,16 +44,16 @@ a {
         width: 500px;
         height: 500px;
         background-image: url(../image/mainlogo.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
+        @include backposition;   
     }
+    @include logo_size;
+         
     .menu_items {
         margin-top: 50px;
+        width: 350px;
         
         li {
             margin-top: 20px;
-            width: 350px;
             height: 72px;
             background-color: $font-color-base;
             border-radius: 50px;
@@ -76,6 +77,8 @@ a {
         }
 
     }
+    @include menuitems_size;
+
     .menu_contacts {
         margin-top: 50px;
         display: flex;
@@ -106,56 +109,47 @@ a {
     padding-top: 70px;
 }
 .design {
-    padding: 0 100px;
+    padding: 0 80px;
     box-sizing: border-box;
     background-image: url(../image/designfone.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    @include backposition;
+}
+
+@media #{$tl1024} {
+    .design {
+        padding: 10px;
+    }
+    
 }
 
 .desing_header {
+    @include liststyle;
 
     h1 {
         font-size: $font-size-big;
         color: $font-color-one;
     }
-    li {
-        margin-top: 20px;
-        list-style-type: none;
-        color: $font-color-one;
-    }
-    ul {
-        margin-left: 0;
-        padding-left: 0;
-    }
+
 }
 .desing_text {
+    @include liststyle;
 
     h3 {
         margin-top: 60px;
         font-size: $font-size-normal;
         color: $font-color-one;
     }
-    li {
-        margin-top: 20px;
-        list-style-type: none;
-        color: $font-color-one;
-    }
-    ul {
-        margin-left: 0;
-        padding-left: 0;
-    }
+   
 }
 .desing_logo {
     width: 175px;
     height: 105px;
-    margin-top: 100px;
+    margin-top: 80px;
     background-image: url(../image/logogrey.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+    @include backposition;
 }
+
 .design_works {
     display: flex;
     flex-direction: row;
@@ -163,8 +157,7 @@ a {
     justify-content: center;
 
     .works_start {
-        width: 265px;
-        height: 265px;
+        @include itemsize;
         margin: 5px;
         padding: 20px;
         box-sizing: border-box;
@@ -180,48 +173,55 @@ a {
             height: 200px;
             display: flex;
             background-image: url(../image/worknext.svg);
-            background-repeat: no-repeat;
-            background-position: center center;
+            @include backposition;
         }
     }
     .work_end {
-        width: 265px;
-        height: 265px;
+        @include itemsize;
         margin: 5px;
         display: flex;
         justify-content: center;
+        align-items: center;
         background-color: $font-color-base;
 
         .work_previous {
-            width: 100px;
-            height: 265px;
+            width: 80px;
+            height: 100px;
             margin-right: 10px;
             display: flex;
             background-image: url(../image/workprevious.svg);
-            background-repeat: no-repeat;
-            background-position: center center;
             background-color: $font-color-base;
+            @include style_button;
+            @include backposition;
         }
        
         .work_next {
-            width: 50px;
-            height: 265px;
+            width: 80px;
+            height: 100px;
             display: flex;
             background-image: url(../image/worknext.svg);
-            background-repeat: no-repeat;
-            background-position: center center;
             background-color: $font-color-base;
+            @include style_button;
+            @include backposition;
         }
     }
 
     .work_item {
         margin: 5px;
-        width: 265px;
-        height: 265px;
+        @include itemsize;
         display: flex;
         background-image: url(../image/face_one.png);
         background-size: contain;
     }
+    .work_items {
+        margin: 5px;
+        @include itemsize;
+        display: flex;
+        background-image: url(../image/face_one.png);
+        background-size: contain;
+    }
+    @include work_items;
+    
     
 }
 .retush_block {
@@ -278,6 +278,26 @@ a {
         align-items: center;
         background-image: url(../image/face_one.png);
     }
+    .photo_items {
+        margin: 10px;
+        width: 210px;
+        height: 210px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../image/face_one.png);
+    }
+    .photo_sizeitem {
+        margin: 10px;
+        width: 210px;
+        height: 210px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../image/face_one.png);
+    }
+    @include photo_itemsize;
+
     .slide_button {
         width: 100px;
         height: 100px;
@@ -285,13 +305,13 @@ a {
         justify-content: center;
         align-items: center;
         background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
+        @include backposition;
     }
 
     .previous {
         background-color: black;
         background-image: url(../image/befor.svg);
+        @include style_button;
     }
         .previous:hover {
             animation: sahke 0.5s linear alternate infinite;
@@ -306,6 +326,7 @@ a {
     .next {
         background-color: black;
         background-image: url(../image/after.svg);
+        @include style_button;
     }
     .next:hover {
         animation: sahke 0.5s linear alternate infinite;
@@ -326,7 +347,7 @@ a {
     align-items: center;
     justify-content: center;
     background-image: url(../image/www.jpg);
-    background-repeat: no-repeat;
+    @include backposition;
     background-size: cover;
     
         .formBlock {
@@ -447,7 +468,6 @@ a {
         margin-left: 20px;
         display: flex;
         flex-direction: column;
-        // background-color: red;
     }
 }
 .imageItemOne {
